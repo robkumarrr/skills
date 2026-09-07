@@ -43,9 +43,11 @@ Agents are lazy and love shortcuts. Always include an **Anti-patterns** section 
 
 ## Formatting Reminders
 
-This repository uses a strict Markdown linter in CI. Before pushing, remember:
+This repository uses a strict Markdown linter in CI. We have intentionally disabled the 80-character line limit, but `markdownlint` is still strict about trailing spaces and blank lines.
 
-- No trailing spaces at the end of lines.
-- Always leave a blank line before and after lists.
-- Always leave a blank line before and after `##` headings.
-- We have intentionally disabled the 80-character line limit, so you do not need to hard-wrap your paragraphs.
+Before pushing your branch, you can automatically fix all formatting errors by running:
+```bash
+npx markdownlint-cli2 "**/*.md" --fix
+```
+
+Alternatively, installing the `markdownlint` editor extension (by David Anson) will highlight and auto-fix these for you on save!
