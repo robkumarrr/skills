@@ -5,7 +5,7 @@ description: "Enforce atomic commits and disciplined version control. Use when c
 
 # Atomic Commits
 
-An atomic commit is exactly one logical change. It does one thing, it does it completely, and it leaves the codebase in a working state. 
+An atomic commit is exactly one logical change. It does one thing, it does it completely, and it leaves the codebase in a working state.
 
 When invoked to commit work, you must enforce this discipline mechanically. Never commit a broken state, and never mix unrelated changes.
 
@@ -20,19 +20,25 @@ When invoked to commit work, you must enforce this discipline mechanically. Neve
 When handling unstaged work or breaking down a diff, follow this exact loop:
 
 ### 1. Analyze and Plan
+
 Run `git status` and `git diff`. Identify the distinct logical chunks of work. Mentally list out the commits you will need to make to get the working tree clean.
 
 ### 2. Stage Surgically
-Do not use `git add .` if there are mixed changes. 
+
+Do not use `git add .` if there are mixed changes.
+
 - Run `git add -p` (if supported) to stage specific hunks, OR manually stage specific files.
 - Run `git diff --cached` to explicitly verify that *only* the lines belonging to this specific logical change are staged. If unrelated lines snuck in, `git restore --staged <file>` them out.
 
 ### 3. Verify
-Before committing, prove the staged code works. 
-- Run the relevant unit tests or typechecker for the specific area you are committing. 
+
+Before committing, prove the staged code works.
+
+- Run the relevant unit tests or typechecker for the specific area you are committing.
 - If it fails, fix the code and update the staged changes before moving forward.
 
 ### 4. Write a Conventional Commit
+
 Draft a commit message following the Conventional Commits specification: `<type>(<optional scope>): <description>`.
 
 - `feat`: A new feature
@@ -44,4 +50,5 @@ Draft a commit message following the Conventional Commits specification: `<type>
 **The Body**: The subject line should be clear enough to explain *what* changed. A commit body is **optional** and should only be used if the *why* behind the change is highly complex, non-obvious, or if you are preparing a large PR. Do not write filler text.
 
 ### 5. Commit and Repeat
+
 Run `git commit -m "<message>"`. If `git status` shows remaining unstaged work, return to Step 1 and repeat the loop until the working tree is completely clean.

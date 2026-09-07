@@ -1,10 +1,12 @@
 # skills
+
 A collection of skills I find useful for my own development that I have not found elsewhere.
 
 ## Available Skills
 
 ### `atomic-commits`
-Enforces atomic commits and disciplined version control for AI agents. It forces the agent to break down large diffs into logical, single-responsibility commits and use Conventional Commits formatting (`feat:`, `fix:`, `refactor:`, etc.). 
+
+Enforces atomic commits and disciplined version control for AI agents. It forces the agent to break down large diffs into logical, single-responsibility commits and use Conventional Commits formatting (`feat:`, `fix:`, `refactor:`, etc.).
 
 ## Installation
 
