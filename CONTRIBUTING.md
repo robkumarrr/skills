@@ -46,6 +46,7 @@ Agents are lazy and love shortcuts. Always include an **Anti-patterns** section 
 This repository uses a strict Markdown linter in CI. We have intentionally disabled the 80-character line limit, but `markdownlint` is still strict about trailing spaces and blank lines.
 
 Before pushing your branch, you can automatically fix all formatting errors by running:
+
 ```bash
 npx markdownlint-cli2 "**/*.md" --fix
 ```
