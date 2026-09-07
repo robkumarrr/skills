@@ -17,7 +17,9 @@ npx skills@latest add robertkumar/skills
 ## 🛠️ Available Skills
 
 ### `atomic-commits`
-Enforces atomic commits and disciplined version control for AI agents. 
+
+Enforces atomic commits and disciplined version control for AI agents.
+
 - **Prevents "Kitchen Sink" commits:** Explicitly bans the agent from using `git commit -am` or `git add .` when dealing with mixed changes.
 - **Forces Surgical Staging:** Requires the agent to use `git add -p` and verify changes with `git diff --cached`.
 - **Enforces Conventional Commits:** Enforces standard `<type>: <description>` formatting.
