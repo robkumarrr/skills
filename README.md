@@ -1,21 +1,27 @@
-# skills
+# Robert's Agent Skills
 
-A collection of skills I find useful for my own development that I have not found elsewhere.
+A collection of high-quality, specialized skills for AI coding agents (compatible with `skills.sh`, Claude Code, Cursor, Antigravity, etc.).
 
-## Available Skills
+These skills are designed to enforce strict engineering discipline and prevent agents from taking lazy shortcuts.
 
-### `atomic-commits`
+## 🚀 Installation
 
-Enforces atomic commits and disciplined version control for AI agents. It forces the agent to break down large diffs into logical, single-responsibility commits and use Conventional Commits formatting (`feat:`, `fix:`, `refactor:`, etc.).
-
-## Installation
-
-You can install these skills directly into your AI coding agent (like Claude Code, Cursor, or Antigravity) using the `skills.sh` CLI.
-
-Run the following command in your project repository:
+To teach your AI agent these skills, navigate to your project directory and run:
 
 ```bash
 npx skills@latest add robertkumar/skills
 ```
 
-*(Note: Replace `robertkumar` with your actual GitHub username if different!)*
+*(This interactive CLI will let you select which specific skills from this repository you want to install into your project).*
+
+## 🛠️ Available Skills
+
+### `atomic-commits`
+Enforces atomic commits and disciplined version control for AI agents. 
+- **Prevents "Kitchen Sink" commits:** Explicitly bans the agent from using `git commit -am` or `git add .` when dealing with mixed changes.
+- **Forces Surgical Staging:** Requires the agent to use `git add -p` and verify changes with `git diff --cached`.
+- **Enforces Conventional Commits:** Enforces standard `<type>: <description>` formatting.
+
+---
+
+*See [CONTRIBUTING.md](./CONTRIBUTING.md) for notes on how to add and format new skills.*
